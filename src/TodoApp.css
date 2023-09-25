@@ -1,0 +1,116 @@
+/* TodoApp.css */
+
+/* App container */
+div {
+  font-family: Arial, sans-serif;
+  max-width: 550px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background: rgb(94, 214, 214);
+  background: linear-gradient(
+    90deg,
+    rgba(94, 214, 214, 0.5160189075630253) 4%,
+    rgba(127, 113, 134, 0.471) 45%,
+    rgba(218, 102, 104, 0.743) 68%
+  );
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+/* Input and button styles */
+input[type="text"] {
+  color: #403939;
+  width: 100%;
+  padding: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  background: #fff;
+}
+button {
+  border: 1px solid #bf1c1c;
+}
+.delete {
+  position: relative;
+  background: #bf1c1c;
+}
+.edit {
+  position: absolute;
+  background: #bf1c1c;
+  margin-left: 300px;
+}
+.add {
+  padding: 10px 20px;
+  background: #bf1c1c;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+  margin: 10px 20px;
+}
+.sort {
+  background: #bf1c1c;
+  padding: 3px;
+}
+/* Todo list styles */
+ul {
+  list-style-type: armenian;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  color: #413e3e;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Edit and delete button styles */
+button:hover {
+  background-color: hwb(302 80% 9%);
+}
+
+/* Search and sort styles */
+select {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 480px) {
+  input[type="text"] {
+    width: 60%;
+  }
+  div {
+    max-width: 550px;
+  }
+
+  select {
+    width: 60%;
+    margin-top: 5px;
+  }
+
+  .edit {
+    position: absolute;
+    background: #bf1c1c;
+    margin-left: 150px;
+    font-size: 15px;
+  }
+  .delete {
+    position: relative;
+    background: #bf1c1c;
+    font-size: 15px;
+  }
+  .todo-list {
+    width: 300px;
+  }
+}
