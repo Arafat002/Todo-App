@@ -3,7 +3,7 @@
 /* App container */
 div {
   font-family: Arial, sans-serif;
-  max-width: 850px;
+  max-width: 750px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
@@ -166,5 +166,11 @@ select {
   #lists {
     width: 100px;
     padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  div {
+    max-width: 550px;
   }
 }
