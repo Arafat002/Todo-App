@@ -3,7 +3,7 @@
 /* App container */
 div {
   font-family: Arial, sans-serif;
-  max-width: 650px;
+  max-width: 850px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
@@ -140,7 +140,7 @@ select {
     width: 60%;
   }
   div {
-    max-width: 450px;
+    max-width: 650px;
   }
 
   select {
