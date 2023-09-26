@@ -3,7 +3,7 @@
 /* App container */
 div {
   font-family: Arial, sans-serif;
-  max-width: 550px;
+  max-width: 650px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 5px;
@@ -41,7 +41,7 @@ button {
 .edit {
   position: absolute;
   background: #bf1c1c;
-  margin-left: 300px;
+  margin-left: 400px;
 }
 .add {
   padding: 10px 20px;
@@ -70,6 +70,16 @@ li {
   color: #413e3e;
   border-bottom: 1px solid #ccc;
 }
+#lists {
+  margin-right: 260px;
+}
+li input[type="checkbox"] {
+  margin-right: 0px;
+}
+
+li span {
+  flex: 1; /* Expand to fill available space */
+}
 
 /* Edit and delete button styles */
 button:hover {
@@ -84,14 +94,19 @@ select {
   border-radius: 3px;
   cursor: pointer;
 }
+/* Add a CSS class for completed TODO items */
+.completed {
+  text-decoration: line-through;
+  color: #1e1515; /* You can choose the color for completed items */
+}
 
 /* Responsive styles */
-@media (max-width: 480px) {
+@media only screen and (min-width: 600px) {
   input[type="text"] {
     width: 60%;
   }
   div {
-    max-width: 550px;
+    max-width: 450px;
   }
 
   select {
@@ -102,15 +117,54 @@ select {
   .edit {
     position: absolute;
     background: #bf1c1c;
-    margin-left: 150px;
+    margin-left: 200px;
     font-size: 15px;
   }
   .delete {
-    position: relative;
+    position: absolute;
     background: #bf1c1c;
     font-size: 15px;
+    margin-left: 280px;
   }
   .todo-list {
-    width: 300px;
+    width: 350px;
+  }
+  #lists {
+    width: 100px;
+    padding-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  input[type="text"] {
+    width: 60%;
+  }
+  div {
+    max-width: 450px;
+  }
+
+  select {
+    width: 60%;
+    margin-top: 5px;
+  }
+
+  .edit {
+    position: absolute;
+    background: #bf1c1c;
+    margin-left: 200px;
+    font-size: 15px;
+  }
+  .delete {
+    position: absolute;
+    background: #bf1c1c;
+    font-size: 15px;
+    margin-left: 280px;
+  }
+  .todo-list {
+    width: 350px;
+  }
+  #lists {
+    width: 100px;
+    padding-left: 20px;
   }
 }

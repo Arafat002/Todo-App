@@ -34,11 +34,17 @@ function TodoApp() {
 
   const editTodo = (id, newText) => {
     const updatedTodos = todos.map((todo) =>
-      todo.id === id ? { ...todo, text: newText } : todo
+      todo.id === id ? { ...todo, text: newText, timestamp: Date.now() } : todo
     );
     setTodos(updatedTodos);
   };
 
+  const toggleComplete = (id) => {
+    const updatedTodos = todos.map((todo) =>
+      todo.id === id ? { ...todo, completed: !todo.completed } : todo
+    );
+    setTodos(updatedTodos);
+  };
   const sortedTodos = [...todos];
 
   if (sortBy === "name") {
@@ -80,7 +86,14 @@ function TodoApp() {
       <ul className="todos">
         {filteredTodos.map((todo) => (
           <li key={todo.id} className="todo-list">
-            <span>{todo.text}</span>
+            <input
+              type="checkbox"
+              checked={todo.completed}
+              onChange={() => toggleComplete(todo.id)}
+            />
+            <span id="lists" className={todo.completed ? "completed" : ""}>
+              {todo.text}
+            </span>
             <button
               className="edit"
               onClick={() =>
