@@ -105,10 +105,13 @@ select {
   input[type="text"] {
     width: 60%;
   }
-  div {
-    width: 650px;
-  }
 
+  div {
+    max-width: 650px;
+  }
+  .todos {
+    padding-left: 80px;
+  }
   select {
     width: 60%;
     margin-top: 5px;
@@ -151,17 +154,17 @@ select {
   .edit {
     position: absolute;
     background: #bf1c1c;
-    margin-left: 200px;
+    margin-left: 130px;
     font-size: 15px;
   }
   .delete {
     position: absolute;
     background: #bf1c1c;
     font-size: 15px;
-    margin-left: 280px;
+    margin-left: 210px;
   }
   .todo-list {
-    width: 350px;
+    width: 200px;
   }
   #lists {
     width: 100px;
