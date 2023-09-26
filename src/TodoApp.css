@@ -106,7 +106,7 @@ select {
     width: 60%;
   }
   div {
-    max-width: 650px;
+    width: 650px;
   }
 
   select {
